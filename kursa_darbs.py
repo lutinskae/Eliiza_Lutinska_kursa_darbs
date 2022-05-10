@@ -1,4 +1,4 @@
-from tkinter import Y
+from tkinter import Y #standarta grafiskā (GUI) pakotne
 import turtle
 import math
 # li = ["Kursa darbs!", "Tēma", "--"]
@@ -35,8 +35,7 @@ def SaulesZiimeejums(): #funkcija, lai izveidotu sauli
     drawFourRays(y, 95, 64)
     y.left(45)
     
-    #color and speed
-    # of turtle
+    
 def MaajasZiimeejums(): #funkcija, lai izveidotu māju
     z = turtle.Turtle()
     z.penup()
@@ -44,7 +43,7 @@ def MaajasZiimeejums(): #funkcija, lai izveidotu māju
     z.color("black")
     z.shape("turtle")
     z.speed(2)
-    # base of the house
+    # majas pirmais stvas/pamats
     z.fillcolor('black')
     z.begin_fill()
     z.right(90)
@@ -57,8 +56,7 @@ def MaajasZiimeejums(): #funkcija, lai izveidotu māju
     z.forward(400)
     z.right(90)
     z.end_fill()
-    # for top of
-    # the house
+    # majas jumta dala
     z.fillcolor('red')
     z.begin_fill()
     z.right(45)
@@ -67,7 +65,7 @@ def MaajasZiimeejums(): #funkcija, lai izveidotu māju
     z.forward(282)
     z.right(45)
     z.end_fill()
-    # windows
+    # logu zimejums
     z.right(90)
     z.forward(400)
     z.left(90)
@@ -101,7 +99,7 @@ def MaajasZiimeejums(): #funkcija, lai izveidotu māju
     z.forward(200)
     z.right(180)
     z.forward(200)
-    # for door
+    # durvju ziimejums
     z.right(90)
     z.forward(75)
     z.left(90)
@@ -146,12 +144,12 @@ def KokaZiimeejums():
     tip.color ("black")
     tip.shape ("turtle")
     tip.speed (2)
-    # Tree base
+    # koka celms
     tip.penup()
     tip.goto(-100, -130)
     tip.pendown()
     drawRectangle(tip, 20, 40, "brown")
-    # Tree top
+    # koka augsdalas
     tip.penup()
     tip.goto(-135, -90)
     tip.pendown()
@@ -166,12 +164,12 @@ def KokaZiimeejums():
     drawTriangle(tip, 70, "lightgreen")
     tip.penup()
 
-izveeleetie = []
+izveeleetie = [] #lists ir tukss
 while True:
     try:
         opcija = int(input("Izvēlieties opcijas\n1 Saule\n2 Māja\n3 Koks\n"))
         if opcija == 1:
-            izveeleetie.append("Sauli")
+            izveeleetie.append("Sauli")#pievieno sauli "izveleties" listam un peecaak pievieno to arii text documentam
             SaulesZiimeejums()
         if opcija == 2:
             izveeleetie.append("Māju")
@@ -184,6 +182,6 @@ while True:
     if izvele == "N" or izvele == "n": break
 fails = open("Rezultati.txt", "w", encoding='utf-8')
 fails.write("Lietotajs izvelejas: ")
-for x in range(len(izveeleetie)):
+for x in range(len(izveeleetie)): #izpildaas tik reizes cik ciklaa izveletie dati, velak ieraksta tekstu no izveleta sarksta
     fails.write(f"{izveeleetie[x]}, ")
 fails.close()
