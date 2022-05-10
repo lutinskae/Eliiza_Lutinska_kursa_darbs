@@ -166,7 +166,7 @@ def KokaZiimeejums():
 
 izveeleetie = [] #lists ir tukss
 while True:
-    try:
+    try: # testee prieks error
         opcija = int(input("Izvēlieties opcijas\n1 Saule\n2 Māja\n3 Koks\n"))
         if opcija == 1:
             izveeleetie.append("Sauli")#pievieno sauli "izveleties" listam un peecaak pievieno to arii text documentam
@@ -182,6 +182,6 @@ while True:
     if izvele == "N" or izvele == "n": break
 fails = open("Rezultati.txt", "w", encoding='utf-8')
 fails.write("Lietotajs izvelejas: ")
-for x in range(len(izveeleetie)): #izpildaas tik reizes cik ciklaa izveletie dati, velak ieraksta tekstu no izveleta sarksta
-    fails.write(f"{izveeleetie[x]}, ")
+for x in range(len(izveeleetie)): #izpildaas tik reizes cik ciklaa izveletie dati
+    fails.write(f"{izveeleetie[x]}, ")  #velak ieraksta tekstu no izveleta sarksta
 fails.close()
