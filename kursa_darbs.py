@@ -40,7 +40,7 @@ def MaajasZiimeejums(): #funkcija, lai izveidotu māju
     z = turtle.Turtle()
     z.penup()
     z.goto(145, 170)
-    z.color("black")
+    z.color("grey")
     z.shape("turtle")
     z.speed(2)
     # majas pirmais stvas/pamats
